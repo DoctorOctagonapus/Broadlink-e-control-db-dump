@@ -7,6 +7,7 @@ Python 3.x and 2.7 scripts for processing data for BroadLink InfraRed / IR devic
 Friendly fork of https://github.com/NightRang3r/Broadlink-e-control-db-dump - pending merges of PRs
 
 Multiple scripts available, getBroadlinkSharedData.py is likely the most useful for regular Android users.
+Related project https://github.com/mjg59/python-broadlink
 
 # getBroadlinkSharedData.py
 
