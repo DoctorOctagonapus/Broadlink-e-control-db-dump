@@ -6,17 +6,7 @@ Python 3.x and 2.7 scripts for processing data for BroadLink InfraRed / IR devic
 
 Friendly fork of https://github.com/NightRang3r/Broadlink-e-control-db-dump - pending merges of PRs
 
-# econtrol-db-dump.py
-
-This script will "parse" the broadlink e-Control Android application **rmt.db database** and dump the IR / RF codes (in HEX format) for selected accessories into a text file which can be later used with broadlink-python to send the codes to the RM PRO hub.
-
-You need to get the "rmt.db" file from your android device or emulator (ARM), 
-
-**ROOT ACCESS REQUIRED**
-
-the file is located in "/data/data/com.broadlink.rmt/databases/rmt.db" and put it in the same folder as this script.
-
-<pre> ~# adb pull /data/data/com.broadlink.rmt/databases/rmt.db </pre>
+Multiple scripts available, getBroadlinkSharedData.py is likely the most useful for regular Android users.
 
 # getBroadlinkSharedData.py
 
@@ -49,8 +39,6 @@ simplejson
 
 `~# pip install simplejson`
 
-
-
 # sendCode.py
 
 This is a script you can use to test that your codes are working, It will send the command to the RM Pro
@@ -62,6 +50,19 @@ You will need the python-broadlink library for the script to work.
 <pre>~# sudo python setup.py install</pre>
 
 You will also need to edit the script `line 6` with your RM Pro IP Address and MAC Address and `line 17` with the code in hex format (Which can be produced by "econtrol-db-dump.py" and "getBroadlinkSharedData.py").
+
+
+# econtrol-db-dump.py
+
+This script will "parse" the broadlink e-Control Android application **rmt.db database** and dump the IR / RF codes (in HEX format) for selected accessories into a text file which can be later used with broadlink-python to send the codes to the RM PRO hub.
+
+You need to get the "rmt.db" file from your android device or emulator (ARM), 
+
+**ROOT ACCESS REQUIRED**
+
+the file is located in "/data/data/com.broadlink.rmt/databases/rmt.db" and put it in the same folder as this script.
+
+<pre> ~# adb pull /data/data/com.broadlink.rmt/databases/rmt.db </pre>
 
 
 # FOR TC2 RF SWITCHES
